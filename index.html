@@ -6,11 +6,21 @@
     <title>Chuajaja Game</title>
 </head>
 <body>
-    <p>Amorcito de mi vida, amorcito de mi corazón, ven y bájame el 
-        <input type="text" id="respuesta" placeholder="Completa la frase...">
-    </p>
+    <p>Amorcito de mi vida, amorcito de mi corazón, ven y bájame el <input type="text" id="respuesta" placeholder="Completa la frase..."></p>
     <button onclick="verificarRespuesta()">Enviar</button>
 
-    <script src="script.js"></script> <!-- Asegúrate de que este nombre coincide con tu archivo JS -->
+    <script>
+        function verificarRespuesta() {
+            const respuesta = document.getElementById("respuesta").value.toLowerCase();
+            if (respuesta === "calzón") {
+                alert("Mañose");
+            } else if (respuesta === "chintrunli") {
+                alert("Obviusly trusly gordusly");
+            } else {
+                alert("Nope, intenta de nuevo");
+            }
+            document.getElementById("respuesta").value = ""; // Limpiar el input
+        }
+    </script>
 </body>
 </html>
